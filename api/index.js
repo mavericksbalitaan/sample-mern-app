@@ -1,11 +1,13 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 8080;
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cors = require("cors");
 dotenv.config();
 
 app.use(express.json());
+app.use(cors());
 
 async function connect() {
   try {
@@ -34,5 +36,3 @@ async function connect() {
 }
 
 connect();
-
-module.exports = app;
