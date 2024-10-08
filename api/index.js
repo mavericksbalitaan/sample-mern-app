@@ -34,5 +34,3 @@ async function connect() {
 }
 
 connect();
-
-module.exports = app;
